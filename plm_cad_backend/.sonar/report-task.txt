@@ -1,0 +1,6 @@
+projectKey=POC_PLM_CAD_BACKEND
+serverUrl=https://contevolve.com/sonarqube
+serverVersion=25.12.0.117093
+dashboardUrl=https://contevolve.com/sonarqube/dashboard?id=POC_PLM_CAD_BACKEND
+ceTaskId=d1b91343-9ae9-44aa-b98d-735a446533d6
+ceTaskUrl=https://contevolve.com/sonarqube/api/ce/task?id=d1b91343-9ae9-44aa-b98d-735a446533d6

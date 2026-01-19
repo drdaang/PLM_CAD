@@ -1,0 +1,77 @@
+<div class="container">
+  <h2>Create BOM</h2>
+
+  <!-- Parent Part -->
+  <div class="card parent-card">
+    <h3>Parent Part</h3>
+    <select 
+      [ngModel]="selectedParentPart()"
+      [ngModelOptions]="{ standalone: true }"
+      (ngModelChange)="selectedParentPart.set($event); onParentChange()"
+    >
+      <option value="" disabled selected>Select Parent Part</option>
+      @for(part of parts(); track part.id){
+        <option [ngValue]="part">{{ part?.partNumber }} — {{ part?.name }}</option>
+      }
+    </select>
+
+    @if(selectedParentPart()){
+      <div class="selected-parent">
+        {{ selectedParentPart()?.name }} — {{ selectedParentPart()?.part_number }}
+      </div>
+    }
+  </div>
+
+  <!-- BOM Table -->
+  <div class="card table-card">
+    <table class="bom-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Child Part</th>
+          <th>Quantity</th>
+          <th>Unit</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(bomRow of bomRows(); track $index){
+          <tr>
+            <td>{{$index + 1}}</td>
+            <td>
+              <select [(ngModel)]="bomRow.child" [ngModelOptions]="{ standalone: true }">
+                <option value="" disabled selected>Select Child Part</option>
+                @for(part of validParts()(bomRow); track part.id){
+                  <option [ngValue]="part">{{ part?.name }}</option>
+                }
+              </select>
+            </td>
+            <td>
+              <input type="number" [(ngModel)]="bomRow.quantity" min="1" step="1" pattern="[0-9]*" required
+                (keydown)="blockNonIntegers($event)" />
+            </td>
+            <td>
+              <select [(ngModel)]="bomRow.unit">
+                <option value="pcs">pcs</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn remove-btn" (click)="removeRow($index)">❌</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <div class="table-actions">
+      <button class="btn add-btn" [disabled]="disabledAddRow()" (click)="addRow()">+ Add New Part</button>
+      @if(disabledAddRow()){
+        <p class="error">{{ disabledAddReason() }}</p>
+      }
+    </div>
+  </div>
+
+  <div class="save-section">
+    <button class="btn save-btn" (click)="saveBom()">Save BOM</button>
+  </div>
+</div>

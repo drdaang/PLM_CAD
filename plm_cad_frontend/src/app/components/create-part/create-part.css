@@ -1,0 +1,113 @@
+/* Page container */
+:host {
+  display: block;
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Labels */
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  gap: 6px;
+}
+
+/* Inputs & textarea */
+input,
+textarea {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Focus state */
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* Textarea specific */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button */
+button {
+  margin-top: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover */
+button:hover:not(:disabled) {
+  background-color: #1e40af;
+}
+
+/* Disabled button */
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Error message */
+p[style*="color:red"] {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626 !important;
+}
+
+/* Success message */
+p[style*="color:green"] {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #16a34a !important;
+}
+
+.part-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  background: #fff;
+  cursor: pointer;
+  max-width: 420px;
+}
+
+.part-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+

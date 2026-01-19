@@ -1,0 +1,42 @@
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-form {
+  width: 350px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* KEY PART */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  width: 90px;      /* fixed label width */
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.form-row input {
+  flex: 1;          /* input takes remaining space */
+  padding: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+}

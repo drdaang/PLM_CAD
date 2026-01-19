@@ -1,0 +1,72 @@
+/* ===============================
+   PAGE
+================================ */
+:host {
+  display: block;
+  padding: 32px; /* ⬆ more breathing room */
+  background: #f6f8fb;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* ===============================
+   TITLE
+================================ */
+.bom-title {
+  margin-bottom: 20px;
+  font-size: 24px;          /* ⬆ bigger title */
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ===============================
+   CARD
+================================ */
+.bom-card {
+  background: #ffffff;
+  border-radius: 10px;     
+  padding: 10px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08); /* ⬆ deeper shadow */
+}
+
+/* ===============================
+   ROOT WRAPPER
+================================ */
+.root {
+  margin-top: 12px;
+}
+
+/* ===============================
+   (OPTIONAL) ROOT NODE
+   keep if you re-enable later
+================================ */
+.bom-node.root {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;      /* ⬆ larger hit area */
+  border-radius: 14px;
+  background: #eef2ff;
+  font-size: 20vh;         /* ⬆ larger text */
+  font-weight: 600;
+}
+
+/* Root content */
+.bom-node.root .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bom-node.root .name {
+  color: #111827;
+}
+
+.bom-node.root .meta {
+  font-size: 14px;         /* ⬆ */
+  color: #6b7280;
+}
+
+/* Root toggle */
+.bom-node.root .toggle {
+  font-size: 16px;         /* ⬆ */
+  color: #2563eb;
+}

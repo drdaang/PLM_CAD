@@ -1,0 +1,6 @@
+projectKey=POC_PLM_CAD
+serverUrl=https://contevolve.com/sonarqube
+serverVersion=25.12.0.117093
+dashboardUrl=https://contevolve.com/sonarqube/dashboard?id=POC_PLM_CAD
+ceTaskId=6859fc91-4f7b-45f9-8a15-560d98f1a8d5
+ceTaskUrl=https://contevolve.com/sonarqube/api/ce/task?id=6859fc91-4f7b-45f9-8a15-560d98f1a8d5

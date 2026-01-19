@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <span class="logo">MyApp</span>
+
+  <ul class="links">
+    @if(this.authService.isAuthenticated()){
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/create-part">Create Part</a></li>
+    <li><a routerLink="/create-bom">Create BOM</a></li>
+    <li><a routerLink="/profile">Profile</a></li>
+    <li><button (click)="logout()">Logout</button></li>
+    }
+    @if(!this.authService.isAuthenticated()){
+        @if(this.router.url==='/signup'){
+            <li><a routerLink="/login">Login</a></li>
+        }
+        @if(this.router.url==='/login'){
+
+            <li><a routerLink="/signup">Signup</a></li>
+        }
+    }
+  </ul>
+</nav>

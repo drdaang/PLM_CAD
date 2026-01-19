@@ -1,0 +1,38 @@
+<!-- NODE ROW -->
+<div
+  class="bom-node child"
+  [class.active]="expanded"
+  (click)="toggle()"
+  tabindex="0"
+>
+  <span class="toggle">
+    {{ node.children?.length ? (expanded() ? '▼' : '▶') : '•' }}
+  </span>
+
+  <div class="info">
+    <span class="name">{{ node.name }}</span>
+    <span class="meta">{{ node.part_number }}</span>
+  </div>
+@if(node.quantity){
+    <span class="qty" >
+      × {{ node.quantity }}
+    </span>
+
+}
+
+  <span
+    *ngIf="node.cycle"
+    class="cycle-warning"
+  >
+     Cycle possiblity
+  </span>
+</div>
+
+<!-- CHILDREN -->
+ @if(expanded()){
+<div class="bom-children" >
+  @for (child of node.children; track child.id) {
+    <app-bom-node-component [node]="child" />
+  }
+</div>
+}

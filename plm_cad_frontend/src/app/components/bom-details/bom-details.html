@@ -1,0 +1,11 @@
+<h2 class="bom-title">BOM Details</h2>
+
+<div class="bom-card">
+
+  <div class="root">
+    @for (node of bomDerivedData(); track node.id) {
+      <app-bom-node-component [node]="node" />
+    }
+  </div>
+
+</div>

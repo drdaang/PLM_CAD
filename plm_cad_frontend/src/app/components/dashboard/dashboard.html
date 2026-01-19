@@ -1,0 +1,27 @@
+<div class="dashboard">
+    <h2>Parts Dashboard</h2>
+
+    @if(!this.isLoading()){
+    <div class="cards">
+        @for(part of parts(); track part.id){
+        <div 
+        class="part-card"
+        (click)="openPart(part.id)">
+            <h3>{{ part.name }}</h3>
+
+            <p><strong>Revision:</strong> R{{ part.revision }}</p>
+            <p><strong>Description:</strong> {{ part.description }}</p>
+
+            <small>
+                Created on {{ part.created_at }}
+            </small>
+            <button (click)="openBom(part.part_id,$event)">View BOM</button>
+        </div>
+        }
+
+    </div>
+    }
+    @else {
+        <div class="loader"></div>
+    }
+</div>

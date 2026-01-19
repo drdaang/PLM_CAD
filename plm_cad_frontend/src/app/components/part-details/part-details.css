@@ -1,0 +1,103 @@
+/* CONTAINER */
+.part-details-container {
+  max-width: 1100px;
+  margin: 32px auto;
+  font-family: "Segoe UI", sans-serif;
+  color: #1f2937;
+}
+
+/* FILE VIEWER */
+.file-viewer-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.file-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.file-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.download-link {
+  font-size: 13px;
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+
+/* PDF viewer */
+.file-viewer {
+  width: 100%;
+  height: 650px;
+  border: none;
+}
+
+/* Image viewer */
+.file-viewer-image {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* PART DETAILS CARD */
+.details-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.details-card h2 {
+  font-size: 26px;
+  margin: 0 0 8px 0;
+}
+
+.details-card .revision {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 4px 10px;
+  background: #eef2ff;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.grid label {
+  font-size: 12px;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.grid span {
+  font-size: 14px;
+  color: #111827;
+}
+
+.description {
+  margin-top: 24px;
+  line-height: 1.6;
+  color: #374151;
+}
